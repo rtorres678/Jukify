@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Jukify</string>
-    <string name = "password">Password</string>
-    <string name = "username">Username</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="logIn">LOG IN</string>
 </resources>
