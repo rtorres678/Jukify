@@ -19,7 +19,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void signIn(View view) {
-        Intent intent = new Intent(this, displayFeedActivity.class);
+        Intent intent = new Intent(this, feedActivity.class);
         EditText editText = (EditText) findViewById(R.id.editText);
         EditText editText2 = (EditText) findViewById(R.id.editText2);
         String message = editText.getText().toString() + editText2.getText().toString();

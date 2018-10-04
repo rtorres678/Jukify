@@ -16,11 +16,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".displayFeedActivity"
+        <activity
+            android:name=".displayFeedActivity"
             android:parentActivityName=".Login">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Login" />
+        </activity>
+        <activity
+            android:name=".feedActivity"
+            android:label="@string/title_activity_feed"
+            android:parentActivityName=".Login"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jukify.jukify.Login" />
         </activity>
     </application>
 
