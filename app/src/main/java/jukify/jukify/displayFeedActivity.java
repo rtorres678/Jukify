@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -39,4 +40,10 @@ public class displayFeedActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
 
     }
+
+    public void joinEvent(View view) {
+        Intent intent = new Intent(this, Playlist_screen.class);
+        startActivity(intent);
+    }
+
 }

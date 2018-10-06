@@ -23,6 +23,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Login" />
         </activity>
+        <activity
+            android:name=".Playlist_screen"
+            android:label="@string/title_activity_playlist_screen"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
