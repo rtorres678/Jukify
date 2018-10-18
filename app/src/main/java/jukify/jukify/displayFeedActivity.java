@@ -46,4 +46,9 @@ public class displayFeedActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void createEvent(View view) {
+        Intent intent = new Intent(this, newPlaylistScreen.class);
+        startActivity(intent);
+    }
+
 }

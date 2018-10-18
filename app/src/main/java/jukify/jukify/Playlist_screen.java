@@ -8,12 +8,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 public class Playlist_screen extends AppCompatActivity {
+    Event event;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playlist_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        event = (Event)getIntent().getSerializableExtra("Event");
+        toolbar.setTitle(event.getName());
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

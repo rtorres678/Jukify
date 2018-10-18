@@ -1,6 +1,8 @@
 package jukify.jukify;
 
-public class Event {
+import java.io.Serializable;
+
+public class Event implements Serializable {
 
     private String name;
     private String host;
@@ -10,6 +12,13 @@ public class Event {
         this.name = name;
         this.host = host;
         this.id = id;
+    }
+
+    public Event(String name)
+    {
+        this.name = name;
+        this.host = "host";
+        this.id = "1234";
     }
 
     public String getName() {

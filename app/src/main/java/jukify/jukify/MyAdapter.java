@@ -1,9 +1,11 @@
 package jukify.jukify;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -23,10 +25,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         public TextView textViewName;
         public TextView textViewDesc;
+        public Button joinButton;
         public MyViewHolder(View v) {
             super(v);
             textViewName = (TextView) itemView.findViewById(R.id.TextViewEventName);
             textViewDesc = (TextView) itemView.findViewById(R.id.TextViewEventDescription);
+            joinButton = (Button) itemView.findViewById(R.id.button5);
 
         }
     }
@@ -47,9 +51,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
-        Event listEvent = listEvents.get(position);
+        final Event listEvent = listEvents.get(position);
         holder.textViewName.setText("Event Name: "+ listEvent.getName());
         holder.textViewDesc.setText("Hosted by: " + listEvent.getHost());
+
+
+        holder.joinButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),  Playlist_screen.class);
+                intent.putExtra("Event", listEvent);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     // Return the size of the feed (invoked by the layout manager)
