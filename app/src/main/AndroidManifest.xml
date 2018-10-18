@@ -26,7 +26,13 @@
         <activity
             android:name=".Playlist_screen"
             android:label="@string/title_activity_playlist_screen"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".displayFeedActivity" />
+        </activity>
+        <activity android:name=".newPlaylistScreen"
+            android:parentActivityName=".displayFeedActivity"></activity>
     </application>
 
 </manifest>
