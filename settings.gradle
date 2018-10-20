@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':spotify-app-remote', ':gson-2.6.2', ':spotify-auth-release-1.1.0'

@@ -54,4 +54,13 @@
         app:layout_constraintEnd_toEndOf="@+id/editText2"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
+    <Button
+        android:id="@+id/skipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="skipButtonClick"
+        android:text="SKIP"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="305dp" />
+
 </android.support.constraint.ConstraintLayout>
