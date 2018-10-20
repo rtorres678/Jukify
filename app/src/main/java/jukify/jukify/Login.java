@@ -119,7 +119,7 @@ public class Login extends AppCompatActivity {
         // Play a playlist
         mSpotifyAppRemote.getPlayerApi().play("spotify:user:spotify:playlist:37i9dQZF1DX2sUQwD7tbmL");
 
-        
+
         mSpotifyAppRemote.getImagesApi().getImage(new ImageUri("spotify:user:spotify:playlist:37i9dQZF1DX2sUQwD7tbmL"));
        // ImageView.setImageURI( mSpotifyAppRemote.getImagesApi().getImage(new ImageUri("spotify:user:spotify:playlist:37i9dQZF1DX2sUQwD7tbmL")));
         mSpotifyAppRemote.getPlayerApi().setShuffle(true);
