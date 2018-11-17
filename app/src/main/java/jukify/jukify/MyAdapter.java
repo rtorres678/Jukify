@@ -60,7 +60,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.joinButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),  Playlist_screen.class);
+                Intent intent = new Intent(v.getContext(),  playlistScreen.class);
                 intent.putExtra("Event", listEvent);
                 v.getContext().startActivity(intent);
             }

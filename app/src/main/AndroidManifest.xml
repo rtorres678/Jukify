@@ -19,7 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".displayFeedActivity"
             android:parentActivityName=".Login">
@@ -28,16 +27,9 @@
                 android:value=".Login" />
         </activity>
         <activity
-            android:name=".Playlist_screen"
-            android:label="@string/title_activity_playlist_screen"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".displayFeedActivity" />
-        </activity>
-        <activity android:name=".newPlaylistScreen"
-            android:parentActivityName=".displayFeedActivity"></activity>
-
+            android:name=".newPlaylistScreen"
+            android:parentActivityName=".displayFeedActivity" />
+        <activity android:name=".playlistScreen"></activity>
     </application>
 
 </manifest>

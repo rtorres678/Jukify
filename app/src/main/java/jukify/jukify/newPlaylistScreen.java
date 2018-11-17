@@ -21,7 +21,7 @@ public class newPlaylistScreen extends AppCompatActivity {
         String name = nameText.getText().toString();
         Event eventNew = new Event(name);
 
-        Intent intent = new Intent(v.getContext(),  Playlist_screen.class);
+        Intent intent = new Intent(v.getContext(),  playlistScreen.class);
         intent.putExtra("Event", eventNew);
         v.getContext().startActivity(intent);
     }

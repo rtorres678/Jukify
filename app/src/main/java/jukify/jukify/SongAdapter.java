@@ -25,14 +25,11 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
     public static class SongViewHolder extends RecyclerView.ViewHolder {
 
         public TextView textViewName;
-        public TextView textViewDesc;
-        public Button joinButton;
+        public TextView textViewArt;
         public SongViewHolder(View v) {
             super(v);
-            //textViewName = (TextView) itemView.findViewById(R.id.TextViewSongName);
-            //textViewDesc = (TextView) itemView.findViewById(R.id.TextViewSongDescription);
-            joinButton = (Button) itemView.findViewById(R.id.button5);
-
+            textViewName = (TextView) itemView.findViewById(R.id.TextViewSongName);
+            textViewArt = (TextView) itemView.findViewById(R.id.TextViewArtistName);
         }
     }
 
@@ -44,7 +41,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
     @Override
     public SongAdapter.SongViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.my_text_view , parent,false);
+                .inflate(R.layout.song_text_view , parent,false);
         return new SongViewHolder(v);
     }
 
@@ -53,10 +50,10 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
     public void onBindViewHolder(SongViewHolder holder, int position) {
 
         final Song listSong = listSongs.get(position);
-        holder.textViewName.setText("Song Name: "+ listSong.getName());
+        //holder.textViewName.setText("Song Name: "+ listSong.getName());
         //holder.textViewDesc.setText("Hosted by: " + listSong.getHost());
 
-
+        /*
         holder.joinButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -64,7 +61,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
                 intent.putExtra("Song", listSong);
                 v.getContext().startActivity(intent);
             }
-        });
+        });*/
     }
 
     // Return the size of the feed (invoked by the layout manager)
