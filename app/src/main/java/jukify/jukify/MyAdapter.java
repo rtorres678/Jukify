@@ -19,6 +19,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         this.context = context;
     }
 
+
     private Context context;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {

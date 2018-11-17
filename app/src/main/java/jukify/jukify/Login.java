@@ -38,12 +38,12 @@ public class Login extends AppCompatActivity {
     }
 
     public void signIn(View view) {
-        EditText editText = (EditText) findViewById(R.id.editText);
+        //EditText editText = (EditText) findViewById(R.id.editText);
         Intent intent = new Intent(this, displayFeedActivity.class);
 
-        EditText editText2 = (EditText) findViewById(R.id.editText2);
-        String message = editText.getText().toString() + editText2.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
+        //EditText editText2 = (EditText) findViewById(R.id.editText2);
+        //String message = editText.getText().toString() + editText2.getText().toString();
+        //intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
 
     }
