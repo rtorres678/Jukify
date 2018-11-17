@@ -13,6 +13,7 @@ import java.util.List;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder> {
     private List<Song> listSongs;
+    SongViewHolder holder2;
 
     public SongAdapter(List<Song> listSongs, Context context) {
         this.listSongs = listSongs;
@@ -26,10 +27,16 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
 
         public TextView textViewName;
         public TextView textViewArt;
+        public TextView textViewScore;
+        public Button upsButton;
+        public Button downsButton;
         public SongViewHolder(View v) {
             super(v);
             textViewName = (TextView) itemView.findViewById(R.id.TextViewSongName);
             textViewArt = (TextView) itemView.findViewById(R.id.TextViewArtistName);
+            textViewScore = (TextView) itemView.findViewById(R.id.textViewScore);
+            upsButton = (Button) itemView.findViewById(R.id.upsButton);
+            downsButton = (Button) itemView.findViewById(R.id.downsButton);
         }
     }
 
@@ -50,18 +57,24 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
     public void onBindViewHolder(SongViewHolder holder, int position) {
 
         final Song listSong = listSongs.get(position);
-        //holder.textViewName.setText("Song Name: "+ listSong.getName());
-        //holder.textViewDesc.setText("Hosted by: " + listSong.getHost());
+        holder.textViewName.setText("Song Name: "+ listSong.getName());
+        holder.textViewArt.setText("By: " + listSong.getArtist());
+        holder.textViewScore.setText("" +listSong.getScore());
 
-        /*
-        holder.joinButton.setOnClickListener(new View.OnClickListener(){
+
+        holder.upsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),  Playlist_screen.class);
-                intent.putExtra("Song", listSong);
-                v.getContext().startActivity(intent);
+                //holder2.textViewScore.setText(listSong.getScore());
             }
-        });*/
+        });
+
+        holder.downsButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                //holder2.textViewScore.setText(listSong.getScore());
+            }
+        });
     }
 
     // Return the size of the feed (invoked by the layout manager)

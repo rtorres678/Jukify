@@ -43,6 +43,16 @@ public class Song implements Serializable {
         return up_votes;
     }
 
+    public void upVote(){
+        this.up_votes++;
+        this.score = this.up_votes - this.down_votes;
+    }
+
+    public void downVote(){
+        this.down_votes++;
+        this.score = this.up_votes - this.down_votes;
+    }
+
     public void setUp_votes(int up_votes) {
         this.up_votes = up_votes;
     }
