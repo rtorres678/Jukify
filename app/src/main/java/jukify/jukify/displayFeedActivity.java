@@ -42,6 +42,7 @@ public class displayFeedActivity extends AppCompatActivity {
 
     public void joinEvent(View view) {
         Intent intent = new Intent(this, playlistScreen.class);
+        //intent.putExtra("Host", "0");
         startActivity(intent);
     }
 

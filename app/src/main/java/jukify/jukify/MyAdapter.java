@@ -62,6 +62,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(),  playlistScreen.class);
                 intent.putExtra("Event", listEvent);
+                //intent.putExtra("Host", 0);
                 v.getContext().startActivity(intent);
             }
         });

@@ -30,6 +30,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
         public TextView textViewScore;
         public Button upsButton;
         public Button downsButton;
+        public Button removeButton;
         public SongViewHolder(View v) {
             super(v);
             textViewName = (TextView) itemView.findViewById(R.id.TextViewSongName);
@@ -37,6 +38,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
             textViewScore = (TextView) itemView.findViewById(R.id.textViewScore);
             upsButton = (Button) itemView.findViewById(R.id.upsButton);
             downsButton = (Button) itemView.findViewById(R.id.downsButton);
+            removeButton = (Button) itemView.findViewById(R.id.removeButton);
         }
     }
 
@@ -75,6 +77,14 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
             @Override
             public void onClick(View v) {
                 listSong.downVote();
+                notifyDataSetChanged();
+            }
+        });
+
+        holder.removeButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                listSongs.remove(listSong);
                 notifyDataSetChanged();
             }
         });

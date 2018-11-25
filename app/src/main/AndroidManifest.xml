@@ -29,7 +29,9 @@
         <activity
             android:name=".newPlaylistScreen"
             android:parentActivityName=".displayFeedActivity" />
-        <activity android:name=".playlistScreen"></activity>
+        <activity android:name=".playlistScreen" />
+        <activity android:name=".Settings" />
+        <activity android:name=".NewSong"></activity>
     </application>
 
 </manifest>

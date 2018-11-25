@@ -6,6 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".playlistScreen">
 
+    <Button
+        android:id="@+id/editSettingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="editSettings"
+        android:text="Edit Settings"
+        app:layout_constraintBottom_toBottomOf="@+id/song_recycler_view"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/newSongButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="newSong"
+        android:text="New Song"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/song_recycler_view" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/song_recycler_view"
         android:layout_width="match_parent"
