@@ -61,18 +61,21 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
         holder.textViewArt.setText("By: " + listSong.getArtist());
         holder.textViewScore.setText("" +listSong.getScore());
 
+        holder2 = holder;
 
         holder.upsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //holder2.textViewScore.setText(listSong.getScore());
+                listSong.upVote();
+                notifyDataSetChanged();
             }
         });
 
         holder.downsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //holder2.textViewScore.setText(listSong.getScore());
+                listSong.downVote();
+                notifyDataSetChanged();
             }
         });
     }

@@ -15,6 +15,7 @@ public class newPlaylistScreen extends AppCompatActivity {
         setContentView(R.layout.activity_new_playlist_screen);
         nameText  = findViewById(R.id.newPlaylistName);
     }
+    
 
     void createNewPlaylist(View v)
     {

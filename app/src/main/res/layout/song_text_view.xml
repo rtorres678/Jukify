@@ -57,14 +57,12 @@
                     android:id="@+id/upsButton"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
-                    android:onClick="upVote"
                     android:text="UP" />
 
                 <Button
                     android:id="@+id/downsButton"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
-                    android:onClick="downVote"
                     android:text="DOWN" />
             </LinearLayout>
         </LinearLayout>
