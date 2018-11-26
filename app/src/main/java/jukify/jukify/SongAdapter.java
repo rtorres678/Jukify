@@ -13,11 +13,12 @@ import java.util.List;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder> {
     private List<Song> listSongs;
-    SongViewHolder holder2;
+    private boolean Host;
 
-    public SongAdapter(List<Song> listSongs, Context context) {
+    public SongAdapter(List<Song> listSongs, Context context, boolean host) {
         this.listSongs = listSongs;
         this.context = context;
+        this.Host = host;
     }
 
 
@@ -63,7 +64,6 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
         holder.textViewArt.setText("By: " + listSong.getArtist());
         holder.textViewScore.setText("" +listSong.getScore());
 
-        holder2 = holder;
 
         holder.upsButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -84,8 +84,10 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
         holder.removeButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                listSongs.remove(listSong);
-                notifyDataSetChanged();
+                if(Host) {
+                    listSongs.remove(listSong);
+                    notifyDataSetChanged();
+                }
             }
         });
     }

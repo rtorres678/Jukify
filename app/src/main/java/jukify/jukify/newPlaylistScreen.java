@@ -24,7 +24,7 @@ public class newPlaylistScreen extends AppCompatActivity {
 
         Intent intent = new Intent(v.getContext(),  playlistScreen.class);
         intent.putExtra("Event", eventNew);
-        //intent.putExtra("Host", "1");
+        intent.putExtra("Host", "true");
         v.getContext().startActivity(intent);
     }
 }
