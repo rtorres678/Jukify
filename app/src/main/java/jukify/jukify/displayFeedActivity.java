@@ -30,7 +30,7 @@ public class displayFeedActivity extends AppCompatActivity {
 
         listEvents = new ArrayList<>();
 
-        for(int i = 0; i < 20; i++){
+        for(int i = 0; i < 2; i++){
             Event event = new Event("Event", "host", "id");
             listEvents.add(event);
         };
@@ -42,7 +42,7 @@ public class displayFeedActivity extends AppCompatActivity {
 
     public void joinEvent(View view) {
         Intent intent = new Intent(this, playlistScreen.class);
-        //intent.putExtra("Host", "0");
+        intent.putExtra("Host", "false");
         startActivity(intent);
     }
 

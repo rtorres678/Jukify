@@ -17,7 +17,7 @@ public class playlistScreen extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
     private boolean superSkipper = false;
     private int scoreThreshold = 0;
-    private boolean host = false;
+    private boolean Host = false;
 
     private List<Song> listSongs;
 
@@ -25,12 +25,13 @@ public class playlistScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playlist_screen);
-        /*int hostInt = Integer.parseInt((String)getIntent().getSerializableExtra("Host"));
-        if(hostInt == 1)
-            host = true;
-        else
-            host = false;
-        */
+        String hostInt= getIntent().getStringExtra("Host");
+        //int hostInt = Integer.parseInt((String)getIntent().getSerializableExtra("Host"));
+        if(hostInt != null && hostInt.equals("true")) {
+            Host = true;
+        }
+        else Host = false;
+
 
         mRecyclerView = (RecyclerView) findViewById(R.id.song_recycler_view);
         mRecyclerView.setHasFixedSize(true);
@@ -44,7 +45,7 @@ public class playlistScreen extends AppCompatActivity {
             listSongs.add(song);
         };
 
-        mAdapter = new SongAdapter(listSongs, this);
+        mAdapter = new SongAdapter(listSongs, this, Host);
         mRecyclerView.setAdapter(mAdapter);
 
 
@@ -52,7 +53,7 @@ public class playlistScreen extends AppCompatActivity {
     }
 
     public void editSettings(View view) {
-        if(host == true) {
+        if(Host == true) {
             //EditText editText = (EditText) findViewById(R.id.editText);
             Intent intent = new Intent(this, Settings.class);
 
