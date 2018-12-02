@@ -2,11 +2,14 @@ package jukify.jukify;
 
 import java.io.Serializable;
 
+import jukify.jukify.Playlist;
+
 public class Event implements Serializable {
 
     private String name;
     private String host;
     private String id;
+    private Playlist playlist;
 
     public Event(String name, String host, String id) {
         this.name = name;
